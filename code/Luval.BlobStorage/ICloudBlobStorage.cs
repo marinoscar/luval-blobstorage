@@ -10,8 +10,9 @@ namespace Luval.BlobStorage
     public interface ICloudBlobStorage
     {
         Task UploadAsync(string fileName, Stream content, CancellationToken cancellationToken);
+        Task CreateDirectoryAsync(string currentDirectory, string newDirectoryName, CancellationToken cancellationToken);
         Task<IEnumerable<IBlobInformation>> GetBlobsAsync(string directoryName, CancellationToken cancellationToken);
-        Task DownloadAsync(IBlobInformation blob, Stream stream, CancellationToken cancellationToken);
-        Task DeleteAsync(IBlobInformation blob, CancellationToken cancellationToken);
+        Task DownloadAsync(string blobFullName, Stream stream, CancellationToken cancellationToken);
+        Task DeleteAsync(string blobFullName, CancellationToken cancellationToken);
     }
 }

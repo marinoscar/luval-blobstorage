@@ -4,6 +4,7 @@ namespace Luval.BlobStorage
 {
     public interface IBlobInformation : IBlobFileName
     {
+        bool IsDirectory { get; }
         string ContentEncoding { get; }
         long? ContentLength { get; }
         string ContentType { get; }
