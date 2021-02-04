@@ -1,0 +1,15 @@
+[
+  {
+    "outputFileName": "resources/lib/blobstorage/blobstorage.min.css",
+    "inputFiles": [ "resources/lib/blobstorage/**/!(*.min).css" ]
+  },
+  {
+    "outputFileName": "resources/lib/blobstorage/blobstorage.min.js",
+    "inputFiles": [ "resources/lib/blobstorage/**/!(*.min).js" ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
